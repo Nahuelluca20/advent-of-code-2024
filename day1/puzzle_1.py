@@ -10,6 +10,8 @@ for line in raw_text.splitlines():
         col1.append(columns[0])
         col2.append(columns[1])
 
+# Sort each list from smallest to largest and
+# convert them to integers
 col1 = sorted(list(map(int, col1)))
 col2 = sorted(list(map(int, col2)))
 
@@ -17,6 +19,7 @@ tolal_sum = 0
 
 for idx, num in enumerate(col1):
     # print(num, idx, col2[idx])
+    # calculate the distance between each pair of numbers
     distance = num - col2[idx]
     tolal_sum = tolal_sum + abs(int(distance))
 
